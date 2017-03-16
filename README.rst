@@ -1,21 +1,5 @@
-===============================
 Niceware for Python
-===============================
-
-
-.. image:: https://img.shields.io/pypi/v/niceware.svg
-        :target: https://pypi.python.org/pypi/niceware
-
-.. image:: https://img.shields.io/travis/moreati/niceware.svg
-        :target: https://travis-ci.org/moreati/niceware
-
-.. image:: https://readthedocs.org/projects/niceware/badge/?version=latest
-        :target: https://niceware.readthedocs.io/en/latest/?badge=latest
-        :alt: Documentation Status
-
-.. image:: https://pyup.io/repos/github/moreati/niceware/shield.svg
-     :target: https://pyup.io/repos/github/moreati/niceware/
-     :alt: Updates
+===================
 
 A Python port of Niceware_, for generating random-yet-memorable passwords.
 Each word provides 16 bits of entropy, so a useful password requires at least
@@ -31,13 +15,13 @@ Usage
 
 To insall
 
-.. code-block:: console
+.. code:: console
 
     $ pip install niceware
 
-To generate an 8-byte passphrase:
+To generate an 8-byte passphrase
 
-.. code-block:: python
+.. code:: python
 
     >>> import niceware
     >>> niceware.generate_passphrase(8)
