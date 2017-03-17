@@ -25,7 +25,7 @@ Each word provides 16 bits of entropy, so a useful password requires at least
 Because the wordlist is of exactly size 2^16, Niceware is also useful for converting cryptographic keys and other sequences of random bytes into human-readable phrases. With Niceware, a 128-bit key is equivalent to an 8-word phrase.
 
 * Free software: MIT license
-* Documentation: https://niceware.readthedocs.io.
+* Documentation: https://python-niceware.readthedocs.io.
 
 Usage
 -----
