@@ -9,12 +9,12 @@ Niceware for Python
         :target: https://travis-ci.org/moreati/python-niceware
         :alt: Build status
 
-.. image:: https://readthedocs.org/projects/niceware/badge/?version=latest
-        :target: https://niceware.readthedocs.io/en/latest/?badge=latest
+.. image:: https://readthedocs.org/projects/python-niceware/badge/?version=latest
+        :target: https://python-niceware.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 
-.. image:: https://pyup.io/repos/github/moreati/niceware/shield.svg
-     :target: https://pyup.io/repos/github/moreati/niceware/
+.. image:: https://pyup.io/repos/github/moreati/python-niceware/shield.svg
+     :target: https://pyup.io/repos/github/moreati/python-niceware/
      :alt: Updates
 
 
