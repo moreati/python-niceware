@@ -1,6 +1,23 @@
 Niceware for Python
 ===================
 
+.. image:: https://img.shields.io/pypi/v/niceware.svg
+        :target: https://pypi.python.org/pypi/niceware
+        :alt: PyPI status
+
+.. image:: https://img.shields.io/travis/moreati/python-niceware.svg
+        :target: https://travis-ci.org/moreati/python-niceware
+        :alt: Build status
+
+.. image:: https://readthedocs.org/projects/niceware/badge/?version=latest
+        :target: https://niceware.readthedocs.io/en/latest/?badge=latest
+        :alt: Documentation Status
+
+.. image:: https://pyup.io/repos/github/moreati/niceware/shield.svg
+     :target: https://pyup.io/repos/github/moreati/niceware/
+     :alt: Updates
+
+
 A Python port of Niceware_, for generating random-yet-memorable passwords.
 Each word provides 16 bits of entropy, so a useful password requires at least
 3 words.
