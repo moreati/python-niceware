@@ -5,7 +5,6 @@
 from __future__ import absolute_import
 from __future__ import print_function
 
-print(__doc__)
 
 import argparse
 import sys
