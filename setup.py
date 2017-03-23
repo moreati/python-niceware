@@ -38,7 +38,7 @@ setup(
     install_requires=requirements,
     license="MIT license",
     zip_safe=True,
-    keywords='niceware',
+    keywords='niceware diceware passphrase password encryption',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Environment :: Console',
