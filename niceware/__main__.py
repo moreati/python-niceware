@@ -21,7 +21,7 @@ def main(args=None):
                         type=int, metavar='N', default=1,
                         help="Number of passphrases to generate")
     parser.add_argument('--length', '-l',
-                        type=int, metavar='N', default=16,
+                        type=int, metavar='N', default=8,
                         help="Number of words in each passphrase")
 
     args = parser.parse_args(args)
