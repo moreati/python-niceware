@@ -28,6 +28,11 @@ setup(
     packages=[
         'niceware',
     ],
+    entry_points={
+        'console_scripts': [
+            'niceware = niceware.__main__:main',
+        ]
+    },
     package_dir={'niceware': 'niceware'},
     include_package_data=True,
     install_requires=requirements,
@@ -36,7 +41,9 @@ setup(
     keywords='niceware',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
+        'Environment :: Console',
         'Intended Audience :: Developers',
+        'Intended Audience :: System Administrators',
         'License :: OSI Approved :: MIT License',
         'Natural Language :: English',
         'Programming Language :: Python :: 2',
