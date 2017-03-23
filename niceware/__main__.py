@@ -26,9 +26,10 @@ def main(args=None):
                         help="Number of words in each passphrase")
 
     args = parser.parse_args(args)
+    size = 2 * args.length
 
     for i in range(args.count):
-        passphrase = niceware.generate_passphrase(args.length)
+        passphrase = niceware.generate_passphrase(size)
         print(' '.join(passphrase))
 
 
