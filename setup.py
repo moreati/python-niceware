@@ -19,7 +19,7 @@ test_requirements = [
 
 setup(
     name='niceware',
-    version='0.1.1',
+    version='0.2.0',
     description='Convert cryptographic keys to human-readable phrases, or generate random-yet-memorable passphrases',
     long_description=readme + '\n\n' + history,
     author='Alex Willmer',
