@@ -44,6 +44,13 @@ To generate an 8-byte passphrase
     >>> niceware.generate_passphrase(8)
     ['deathtrap', 'stegosaur', 'nilled', 'nonscheduled']
 
+or from the command line
+
+.. code:: console
+
+    $ niceware --words 5
+    tincturing distasting await trusser treadler
+
 Niceware for Python uses ``os.urandom`` for entropy.
 
 Credits
