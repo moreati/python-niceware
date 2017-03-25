@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
 
+"""A module to convert cryptographic keys to human-readable passphrases, and
+back again.
+"""
+
 from __future__ import absolute_import
 from __future__ import print_function
 
@@ -24,7 +28,18 @@ MAX_PASSPHRASE_SIZE = 1024  # Max size of passphrase in bytes
 
 
 def bytes_to_passphrase(bytes_):
-    """Convert a sequence of bytes to passphrase.
+    r"""Encode a sequence of bytes as a passphrase.
+
+    bytes_ - a bytes-like object, or a sequence of byte values (integers 0
+             to 255). The sequence must have an even length.
+
+    Each word will encode 2 bytes from the byte seq.
+
+    >>> bytes_to_passphrase(b'\xf2\x87\x9f\x85\x00 d\xca')
+    ['upbraid', 'personalism', 'achene', 'holer']
+
+    >>> bytes_to_passphrase([242, 135, 159, 133, 0, 32, 100, 202])
+    ['upbraid', 'personalism', 'achene', 'holer']
     """
     try:
         length = len(bytes_)
@@ -46,7 +61,15 @@ def bytes_to_passphrase(bytes_):
 
 
 def passphrase_to_bytes(passphrase):
-    """Convert a passphrase back to a bytes object.
+    r"""Decode a passphrase back to a bytes object.
+
+    passphrase -- a sequence of words, each from the niceware word list.
+
+    Each word will decode to 2 bytes of the returned byte sequence
+
+    >>> passphrase_to_bytes(['upbraid', 'personalism', 'achene', 'holer'])
+    ... #doctest: +ALLOW_BYTES
+    b'\xf2\x87\x9f\x85\x00 d\xca'
     """
     byteseq = bytearray(len(passphrase) * 2)
 
@@ -67,6 +90,14 @@ def passphrase_to_bytes(passphrase):
 
 def generate_passphrase(size):
     """Generate a random passphrase with the specified number of bytes.
+
+    size -- the number of bytes to generate, must be even.
+
+    The passphrase will contain size/2 words, and possess size*8 bits of
+    entropy.
+
+    >>> generate_passphrase(8) #doctest: +SKIP
+    ['upbraid', 'personalism', 'achene', 'holer']
     """
     size = int(size)
     if size < 0 or size > MAX_PASSPHRASE_SIZE:
