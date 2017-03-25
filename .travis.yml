@@ -13,3 +13,8 @@ install:
 
 script:
   py.test
+
+notification:
+  email:
+    on_success: change
+    on_failure: change
