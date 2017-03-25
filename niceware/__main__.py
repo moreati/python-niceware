@@ -20,12 +20,12 @@ def main(args=None):
     parser.add_argument('--count', '-c',
                         type=int, metavar='N', default=1,
                         help="Number of passphrases to generate")
-    parser.add_argument('--length', '-l',
+    parser.add_argument('--words', '-w',
                         type=int, metavar='N', default=8,
                         help="Number of words in each passphrase")
 
     args = parser.parse_args(args)
-    size = 2 * args.length
+    size = 2 * args.words
 
     for i in range(args.count):
         passphrase = niceware.generate_passphrase(size)
