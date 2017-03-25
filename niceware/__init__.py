@@ -9,7 +9,7 @@ from __future__ import print_function
 
 __author__ = 'Alex Willmer'
 __email__ = 'alex@moreati.org.uk'
-__version__ = '0.2.0'
+__version__ = '0.2.1'
 
 __all__ = [
     'MAX_PASSPHRASE_SIZE',
