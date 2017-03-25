@@ -23,18 +23,18 @@ from niceware.wordlist import WORD_LIST
 MAX_PASSPHRASE_SIZE = 1024  # Max size of passphrase in bytes
 
 
-def bytes_to_passphrase(s):
+def bytes_to_passphrase(bytes_):
     """Convert a sequence of bytes to passphrase.
     """
     try:
-        length = len(s)
+        length = len(bytes_)
     except TypeError:
         raise TypeError('Input must be a sequence of bytes')
 
     if length % 2 == 1:
         raise ValueError('Only even sized byte sequences are supported.')
 
-    byteseq = bytearray(s)
+    byteseq = bytearray(bytes_)
     words = []
     for index, byte in enumerate(byteseq[:-1:2]):
         index = index * 2
@@ -45,12 +45,12 @@ def bytes_to_passphrase(s):
     return words
 
 
-def passphrase_to_bytes(words):
+def passphrase_to_bytes(passphrase):
     """Convert a passphrase back to a bytes object.
     """
-    byteseq = bytearray(len(words) * 2)
+    byteseq = bytearray(len(passphrase) * 2)
 
-    for index, word in enumerate(words):
+    for index, word in enumerate(passphrase):
         word_lowercase = word.lower()
         word_index = bisect.bisect_left(WORD_LIST, word_lowercase)
 
