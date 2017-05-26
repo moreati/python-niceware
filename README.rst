@@ -18,7 +18,10 @@ Niceware for Python
      :alt: Updates
 
 
-A Python port of Niceware_, for generating random-yet-memorable passwords.
+Python port of Niceware_. Generate random-yet-memorable passphrasese,
+or convert encryption keys to english phrases and back again.
+
+
 Each word provides 16 bits of entropy, so a useful password requires at least
 3 words.
 
